@@ -58,8 +58,8 @@ services:
       # + + + + + [START] CLOUD CREDS + + + + +
       # (Credentials for Could)
       # AWS Creds and config
-      AWS_ACCESS_KEY_ID: "YOUR_KEY"
-      AWS_SECRET_ACCESS_KEY: "YOUR_SECRET"
+      AWS_ACCESS_KEY_ID: "INSERT_HERE_YOUR_KEY"
+      AWS_SECRET_ACCESS_KEY: "INSERT_HERE_YOUR_SECRET"
       AWS_DEFAULT_REGION: "YOUR REGION (ex us-east-1)"
       # + + + + + [END] CLOUD CREDS + + + + +
 
