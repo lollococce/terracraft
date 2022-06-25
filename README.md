@@ -2,7 +2,7 @@
 Run Terraform with Minecraft! A fun way of experimenting with Minecraft and Terraform
 
 
-# Install and Run
+## Install and Run
 
 - Git clone the repo on your localhost
 - Enter the repo with cd ./terracraft and run ``docker-compose up`` or ``docker-compose up -d`` to start the minecraft server container
