@@ -1,0 +1,70 @@
+version: "3.8"
+
+services:
+  minecraft:
+    # Using . to use the local ./Dockerfile that it's in the same path of this file
+    build: "."
+    ports:
+      - "25565:25565"
+      - "4711:4711"
+      - "8123:8123"
+    environment:
+      # + + + + + [START] WORLD SETTINGS + + + + +
+      # - - - World Type - - -
+      # Custom World (Use a custom Seed or a custom world from a ZIP)
+      #WORLD: "https://download1460.mediafire.com/5epwuydu5fmg/35a7iustexizbrc/World+of+worlds+3.9.zip"
+      #SEED: "-1785852800490497919"
+      #GUI: FALSE
+
+      # - - - World Settings - - -
+      MAX_PLAYERS: 50
+      MAX_WORLD_SIZE: 10000
+      ALLOW_NETHER: "TRUE"
+      ENABLE_COMMAND_BLOCK: "TRUE"
+      HARDCORE: "FALSE"
+      SNOOPER_ENABLED: "FALSE"
+      SPAWN_ANIMALS: "TRUE"
+      SPAWN_MONSTERS: "TRUE"
+      SPAWN_NPCS: "TRUE"
+      SPAWN_PROTECTION: 0
+      VIEW_DISTANCE: 10
+      GENERATE_STRUCTURES: "TRUE"
+      FORCE_GAMEMODE: "FALSE"
+      DIFFICULTY: "peaceful"
+      MODE: "survival"
+      LEVEL_TYPE: "DEFAULT"
+      # + + + + + [END] WORLD SETTINGS + + + + +
+      
+      
+      # + + + + + [START] SERVER SETTINGS + + + + +
+      # - - - Server Type - - -
+      # Use SPIGOT server type + install Plugins with ID 22724,34315 etc
+      TYPE: SPIGOT
+      SPIGET_RESOURCES: 22724,34315,51944
+      # Server Title
+      MOTD: "A §l§cSpigot§r §nserver with Terraform"
+      # Custom Server Icon
+      #OVERRIDE_ICON: "TRUE"
+      #ICON: ""
+      
+      # - - - Settings - - -
+      # THIS HAS TO BE TRUE!
+      EULA: "TRUE"
+      ENABLE_ROLLING_LOGS: "TRUE"
+      TZ: "Europe/Rome"
+      # + + + + + [END] SERVER SETTINGS + + + + +
+      
+ 
+      # + + + + + [START] CLOUD CREDS + + + + +
+      # (Credentials for Could)
+      # AWS Creds and config
+      AWS_ACCESS_KEY_ID: "YOUR_KEY"
+      AWS_SECRET_ACCESS_KEY: "YOUR_SECRET"
+      AWS_DEFAULT_REGION: "YOUR REGION (ex us-east-1)"
+      # + + + + + [END] CLOUD CREDS + + + + +
+
+    volumes:
+      - ./data:/data
+
+volumes:
+  data: {}
